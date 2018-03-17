@@ -1,10 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+	
+
 <meta charset="ISO-8859-1">
-<title>Calculadora</title>
+<title> Calculadora </title>
 </head>
 <body>
-
+		<div class="container">
+	
+		<form action="#" th:action="@{/resultado}" th:object="${calculadora}" method="POST">
+	
+		<p>Numero 1: <input class="form-control" type="number" th:field="*{num1}" value=""/></p>
+		<p>Numero 2: <input class="form-control" type="number" th:field="*{num2}" value=""/></p>
+		<p>Tipo de Operaciun: <input class="form-control" type="text" th:field="*{operacion}" maxlength="1" value=""/></p>
+		<p>
+			<input class="btn btn-success"type="submit" value="Calcular"/>
+			<input class="btn btn-danger" type="reset" value="Cancelar"/>
+		</p>
+	
+	</form>
+	
+	</div>
 </body>
 </html>
